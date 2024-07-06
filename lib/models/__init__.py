@@ -1,4 +1,5 @@
-import sqlite3
+from .database import Base, engine, SessionLocal, init_db
+from .author import Author
+from .book import Book
 
-CONN = sqlite3.connect('company.db')
-CURSOR = CONN.cursor()
+init_db()
